@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "aec66877-29b7-48ce-b191-19855df2d91d",
+		"name": "game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12079598",
+		"_collection_link": "https://pam-jaya-6205.postman.co/workspace/PAM-Jaya-Workspace~d6fe6cd3-2065-40d6-82d7-666ee2c1fe12/collection/12079598-aec66877-29b7-48ce-b191-19855df2d91d?action=share&source=collection_link&creator=12079598"
+	},
+	"item": [
+		{
+			"name": "submit score",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":900,\r\n    \"level\":3,\r\n    \"score\":370\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/submit-score",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"submit-score"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaderboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/leaderboard?username=&page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"leaderboard"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": ""
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assessment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/assessment",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"assessment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
